@@ -13,12 +13,13 @@ public class Inventaris {
 		System.out.println("Masukkan Lokasi Ruangan : ");
 		ruang.setLokasiruang(in.next());
 		System.out.println("\n");
-		System.out.println("Masukka Program Studi anda : ");
-		ruang.setStudi(in.next());
-		System.out.println("\n");
 		System.out.println("Masukkan nama Fakultas anda : ");
 		ruang.setFakultas(in.next());
 		System.out.println("\n");
+		System.out.println("Masukkan Program Studi anda : ");
+		ruang.setStudi(in.next());
+		System.out.println("\n");
+		
 		
 	}
 	public void kondisi(){
@@ -35,18 +36,22 @@ public class Inventaris {
 		System.out.println("Masukkan jumlah pintu : ");
 		ruang.setJumlahpintu(in.nextInt());
 		System.out.println("\n");
+		System.out.println("Masukkan jumlah jendela : ");
+		ruang.setJumlahjendela(in.nextInt());
+		System.out.println("\n");
 		
 	
 	}
 	public double Hitungluas(){
 		return ruang.getPanjang()*ruang.getLebar();
+		
 	}
-	public void BentukRuang(){
-		if(ruang.getPanjang()==ruang.getLebar()){
-			System.out.println("Bentuk Ruangan Persegi");
-		}else{
-			System.out.println("Bentuk Ruangan Persegi Panjang");
-		}
+	public String BentukRuang(){
+		if(ruang.getPanjang()==ruang.getLebar())
+			return("Bentuk Ruangan Persegi");
+		else
+			return("Bentuk Ruangan Persegi Panjang");
+		
 	}
 	
 	public double rasio(){
@@ -331,70 +336,73 @@ public class Inventaris {
 			return("Tingkat Keamanan Ruangan = tidak sesuai");
 	}
 	public void ListInputan(){
-		Inventaris baru = new Inventaris();
+		
 		System.out.println(""+ruang.getNamaruang());
 		System.out.println(""+ruang.getLokasiruang());
 		System.out.println(""+ruang.getStudi());
 		System.out.println(""+ruang.getPanjang());
 		System.out.println(""+ruang.getLebar());
 		System.out.println(" Hasil = "+Hitungluas());
-		baru.BentukRuang();
+		System.out.println(""+BentukRuang());
 		System.out.println(""+ruang.getJumlahkursi());
 		System.out.println("luas rasio = "+rasio());
 		System.out.println(""+ruang.getJumlahpintu());
 		System.out.println(""+ruang.getJumlahjendela());
-		baru.AnalisaPintu();
-		baru.AnalisaJendela();
+		System.out.println(""+AnalisaPintu());
+		System.out.println(""+AnalisaJendela());
 		System.out.println(""+ruang.getJumlahstopkontak());
 		System.out.println(""+ruang.getKondisistopkontak());
 		System.out.println(""+ruang.getPosisistopkontak());
-		baru.AnalisaKelistrikan();
+		System.out.println(""+AnalisaKelistrikan());
 		System.out.println(""+ruang.getKabelLCD());
 		System.out.println(""+ruang.getKondisikabelLCD());
 		System.out.println(""+ruang.getPosisikabelLCD());
-		baru.AnalisisLCD();
+		System.out.println(""+AnalisisLCD());
 		System.out.println(""+ruang.getJumlahlampu());
 		System.out.println(""+ruang.getKondisilampu());
 		System.out.println(""+ruang.getPosisilampu());
-		baru.AnalisisLampu();
+		System.out.println(""+AnalisisLampu());
 		System.out.println(""+ruang.getJumlahkipasangin());
 		System.out.println(""+ruang.getKondisikipasangin());
 		System.out.println(""+ruang.getPosisikipasangin());
-		baru.AnalisisKipas();
+		System.out.println(""+AnalisisKipas());
 		System.out.println(""+ruang.getJumlahAC());
 		System.out.println(""+ruang.getKondisiAC());
 		System.out.println(""+ruang.getPosisiAC());
-		baru.AnalisisAC();
+		System.out.println(""+AnalisisAC());
 		System.out.println(""+ruang.getSSID());
 		System.out.println(""+ruang.getBandwidth());
-		baru.AnalisisInternet();
+		System.out.println(""+AnalisisInternet());
 		System.out.println(""+ruang.getJumlahCCTV());
 		System.out.println(""+ruang.getKondisiCCTV());
 		System.out.println(""+ruang.getPosisiCCTV());
-		baru.AnalisisCCTV();
+		System.out.println(""+AnalisisCCTV());
 		System.out.println(""+ruang.getKondisilantai());
 		System.out.println(""+ruang.getKondisidinding());
 		System.out.println(""+ruang.getKondisiatap());
 		System.out.println(""+ruang.getKondisipintu());
 		System.out.println(""+ruang.getKondisijendela());
-		baru.AnalisisKebersihan();
+		System.out.println(""+AnalisisKebersihan());
 		System.out.println(""+ruang.getSirkulasiudara());
-		baru.AnalisisKebisingan();
+		System.out.println(""+AnalisisPencahayaan());
+		System.out.println(""+AnalisisKelembapan());
+		System.out.println(""+AnalisisSuhu());
+		System.out.println(""+AnalisisKebisingan());
 		System.out.println(""+ruang.getBau());
-		baru.AnalisisBau();
+		System.out.println(""+AnalisisBau());
 		System.out.println(""+ruang.getKebocoran());
-		baru.AnalisisKebocoran();
+		System.out.println(""+AnalisisKebocoran());
 		System.out.println(""+ruang.getKerusakan());
-		baru.AnalisisKerusakan();
+		System.out.println(""+AnalisisKerusakan());
 		System.out.println(""+ruang.getKeausan());
-		baru.AnalisisKeausan();
+		System.out.println(""+AnalisisKeausan());
 		System.out.println(""+ruang.getKekokohan());
-		baru.AnalisisKekokohan();
+		System.out.println(""+AnalisisKekokohan());
 		System.out.println(""+ruang.getKuncipintu());
-		baru.AnalisisKunciPintu();
+		System.out.println(""+AnalisisKunciPintu());
 		System.out.println(""+ruang.getKuncijendela());
-		baru.AnalisisKunciJendela();
+		System.out.println(""+AnalisisKunciJendela());
 		System.out.println(""+ruang.getBahaya());
-		AnalisisKeamananRuang();
+		System.out.println(""+AnalisisKeamananRuang());
 	}
 }
