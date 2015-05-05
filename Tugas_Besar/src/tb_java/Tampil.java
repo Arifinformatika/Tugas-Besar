@@ -1,9 +1,9 @@
 package tb_java;
 
-public class Tampil	extends Inventaris{
+public class Tampil	extends RuangKelas{
 	
 public void ListInputan(){
-		Inventaris Muncul = new Inventaris();
+		
 		System.out.println(""+super.getNamaruang());
 		System.out.println(""+super.getLokasiruang());
 		System.out.println(""+super.getStudi());
