@@ -4,44 +4,70 @@ package tb_java;
 public class Main_Class {
 
 	public static void main(String[] args) {
-		Inventaris[] Main;
-		Main = new Inventaris[1];
-		for (int i = 0; i < Main.length; i++) {
-			Main[i] = new Inventaris();
-			Main[i].Insertdata();
-			Main[i].kondisi();
-			Main[i].Hitungluas();
-			Main[i].BentukRuang();
-			Main[i].rasio();
-			Main[i].AnalisaPintu();
-			Main[i].AnalisaJendela();
-			Main[i].JmlhkondisidanposisiSarana();
-			Main[i].AnalisaKelistrikan();
-			Main[i].AnalisisLCD();
-			Main[i].AnalisisLampu();
-			Main[i].AnalisisKipas();
-			Main[i].AnalisisAC();
-			Main[i].AnalisisInternet();
-			Main[i].AnalisisCCTV();
-			Main[i].lingkungan();
-			Main[i].AnalisisKebersihan();
-			Main[i].Kebersihan();
-			Main[i].AnalisisSirkulasiUdara();
-			Main[i].AnalisisPencahayaan();
-			Main[i].AnalisisKelembapan();
-			Main[i].AnalisisSuhu();
-			Main[i].Kenyamanan();
-			Main[i].AnalisisKebisingan();
-			Main[i].AnalisisBau();
-			Main[i].AnalisisKebocoran();
-			Main[i].AnalisisKerusakan();
-			Main[i].AnalisisKeausan();
-			Main[i].Keamanan();
-			Main[i].AnalisisKekokohan();
-			Main[i].AnalisisKunciPintu();
-			Main[i].AnalisisKunciJendela();
-			Main[i].AnalisisKeamananRuang();
-			Main[i].ListInputan();
+		Inventaris[] a = new Inventaris[1];
+		JmlhKondisiPosisiSarana [] b = new JmlhKondisiPosisiSarana[1];
+		KeamanaRuangKelas [] c = new KeamanaRuangKelas[1];
+		KebersihanRuangKelas[] d = new KebersihanRuangKelas[1];
+		KenyamananRuangKelas [] e = new KenyamananRuangKelas[1];
+		KondisiRKelas [] f = new KondisiRKelas[1];
+		LingkunganRuangKelas [] g = new LingkunganRuangKelas[1];
+		Tampil apa = new Tampil();
+		
+		for (int i = 0; i < a.length; i++) {
+			a[i] = new Inventaris();
+			a[i].Insertdata();
+		}
+		for (int i = 0; i < f.length; i++){
+			f[i] = new KondisiRKelas();
+			f[i].kondisi();
+			f[i].Hitungluas();
+			f[i].BentukRuang();
+			f[i].rasio();
+			f[i].AnalisaJendela();
+			f[i].AnalisaPintu();
+		}
+		for (int i = 0; i < b.length; i++) {
+			b[i] = new JmlhKondisiPosisiSarana();
+			b[i].JmlhkondisidanposisiSarana();
+			b[i].AnalisaKelistrikan();
+			b[i].AnalisisLCD();
+			b[i].AnalisisLampu();
+			b[i].AnalisisKipas();
+			b[i].AnalisisAC();
+			b[i].AnalisisInternet();
+			b[i].AnalisisCCTV();
+		}
+		for (int i = 0; i < g.length; i++){
+			g[i] = new LingkunganRuangKelas();
+			g[i].lingkungan();
+			g[i].AnalisisKebersihan();
+		}
+		for (int i = 0; i < d.length; i++){
+			d[i] = new KebersihanRuangKelas();
+			d[i]. Kebersihan();
+			d[i]. AnalisisSirkulasiUdara();
+			d[i]. AnalisisKelembapan();
+			d[i]. AnalisisPencahayaan();
+			d[i].AnalisisSirkulasiUdara();
+			d[i].AnalisisSuhu();
+		}
+		for (int i = 0; i < e.length; i++){
+			e[i] = new KenyamananRuangKelas();
+			e[i].Kenyamanan();
+			e[i].AnalisisKebisingan();
+			e[i].AnalisisBau();
+			e[i].AnalisisKebocoran();
+			e[i].AnalisisKerusakan();
+			e[i].AnalisisKeausan();
+		}
+		for (int i = 0; i < c.length; i++) {
+			c[i] = new KeamanaRuangKelas();
+			c[i].Keamanan();
+			c[i].AnalisisKekokohan();
+			c[i].AnalisisKunciJendela();
+			c[i].AnalisisKunciPintu();
+			c[i].AnalisisKeamananRuang();
+		}
+		apa.ListInputan();
 		}
 	}
-}
