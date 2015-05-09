@@ -370,6 +370,23 @@ public abstract class RuangKelas {
     public void setBahaya(int bahaya) {
         this.bahaya = bahaya;
     }
-    
+    public void kondisi(){
+        
+    } 
+    public void JmlhkondisidanposisiSarana(){
+        
+    }
+    public void lingkungan(){
+        
+    }
+    public void Kebersihan(){
+        
+    }
+    public void Kenyamanan(){
+        
+    }
+    public void Keamanan(){
+        
+    }
     
 }
