@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class KeamanaRuangKelas extends RuangKelas {
 	Scanner in = new Scanner(System.in);
 	
+	@Override
 	public void Keamanan(){
 		System.out.println("Kekokohan ruangan : \n1. kokoh \n2. tidak kokoh");
 		super.setKekokohan(in.nextInt());
