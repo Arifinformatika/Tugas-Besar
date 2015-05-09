@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class LingkunganRuangKelas extends RuangKelas{
 	Scanner in = new Scanner(System.in);
 	
+	@Override
 	public void lingkungan(){
 		System.out.println("Kondisi lantai diruangan : \n1. bersih \n2. kotor");
 		super.setKondisilantai(in.nextInt());
