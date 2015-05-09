@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class KondisiRKelas extends RuangKelas{
 	Scanner in = new Scanner(System.in);
 	
+	
+	@Override
 	public void kondisi(){
 		System.out.println("Kondisi Ruang Kelas\n");
 		System.out.println("Masukkan panjang ruangan : ");
