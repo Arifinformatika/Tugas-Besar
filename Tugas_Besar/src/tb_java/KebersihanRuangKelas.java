@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class KebersihanRuangKelas extends RuangKelas{
 	Scanner in = new Scanner(System.in);
 	
+	@Override
 	public void Kebersihan(){
 		System.out.println("Konisi sirkulasi udara : \n1. lancar \n2. tidak lancar");
 		super.setSirkulasiudara(in.nextInt());
