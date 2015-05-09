@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class JmlhKondisiPosisiSarana extends RuangKelas {
 	Scanner in = new Scanner(System.in);
 	
+	@Override
 	public void JmlhkondisidanposisiSarana(){
 		System.out.println("Masukkan jumlah steker diruangan : ");
 		super.setJumlahstopkontak(in.nextInt());
