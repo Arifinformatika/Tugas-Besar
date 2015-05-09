@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class KenyamananRuangKelas extends RuangKelas {
 	Scanner in = new Scanner(System.in);
 	
+	@Override
 	public void Kenyamanan(){
 
 		System.out.println("Kondisi Kebisingan : \n1. tidak bising \n2. bising");
