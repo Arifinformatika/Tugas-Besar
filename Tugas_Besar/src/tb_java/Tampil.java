@@ -1,4 +1,3 @@
-package tb_java;
 
 public class Tampil extends RuangKelas{
 	
@@ -79,4 +78,3 @@ public void ListInputan(){
 		System.out.println(""+f.AnalisisKeamananRuang());
 	}
 }
-	
