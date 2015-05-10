@@ -7,18 +7,12 @@ public class Inventaris extends RuangKelas{
 	//RuangKelas ruang = new RuangKelas();
 	
 	public void Insertdata(){
-		System.out.println("Masukkan nama ruangan : ");
-		super.setNamaruang(in.next());
-		System.out.println("\n");
-		System.out.println("Masukkan Lokasi Ruangan : ");
-		super.setLokasiruang(in.next());
-		System.out.println("\n");
-		System.out.println("Masukkan nama Fakultas anda : ");
-		super.setFakultas(in.next());
-		System.out.println("\n");
-		System.out.println("Masukkan Program Studi anda : ");
-		super.setStudi(in.next());
-		System.out.println("\n");	
+		System.out.println("Masukkan Identitas : (nama ruangan, lokasi ruangan, fakultas, Prodi)");
+		super.setInventaris(in.next(), in.next(), in.next(), in.next());
+		
+	}
+	public Inventaris(){
+		
 	}
 }
 		

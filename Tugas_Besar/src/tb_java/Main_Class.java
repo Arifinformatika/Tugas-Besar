@@ -1,6 +1,5 @@
 package tb_java;
 
-
 public class Main_Class {
 
 	public static void main(String[] args) {
@@ -17,7 +16,7 @@ public class Main_Class {
 			a[i] = new Inventaris();
 			a[i].Insertdata();
 		}
-		for (int i = 0; i < f.length; i++){
+		/*for (int i = 0; i < f.length; i++){
 			f[i] = new KondisiRKelas();
 			f[i].kondisi();
 			f[i].Hitungluas();
@@ -67,7 +66,7 @@ public class Main_Class {
 			c[i].AnalisisKunciJendela();
 			c[i].AnalisisKunciPintu();
 			c[i].AnalisisKeamananRuang();
-		}
+		}*/
 		apa.ListInputan();
 		}
 	}

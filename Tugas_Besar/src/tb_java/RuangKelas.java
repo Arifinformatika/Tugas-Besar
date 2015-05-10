@@ -1,6 +1,6 @@
 package tb_java;
 
-public class RuangKelas {
+public abstract class RuangKelas {
     private String namaruang;
     private String lokasiruang;
     private String studi;
@@ -49,62 +49,57 @@ public class RuangKelas {
     private int kuncipintu;
     private int kuncijendela;
     private int bahaya;
-     
+    
+    
+    void setInventaris(String namaruang, String lokasiruang, String studi, String fakultas){
+    	this.namaruang = namaruang;
+    	this.lokasiruang = lokasiruang;
+    	this.studi = studi;
+    	this.fakultas = fakultas;
+    }
     public String getNamaruang() {
         return namaruang;
-    }
-    public void setNamaruang(String namaruang) {
-        this.namaruang = namaruang;
     }
     public String getLokasiruang() {
         return lokasiruang;
     }
-    public void setLokasiruang(String lokasiruang) {
-        this.lokasiruang = lokasiruang;
-    }
     public String getStudi() {
         return studi;
-    }
-    public void setStudi(String studi) {
-        this.studi = studi;
     }
     public String getFakultas() {
        return fakultas;
     }
-    public void setFakultas(String fakultas) {
-        this.fakultas = fakultas;
-    }     
     public int getPanjang(){
        return panjang;        
     }
-    public void setPanjang(int newPanjang){
-        panjang = newPanjang;
-    }
-    public int getLebar(){
-        return lebar;
-    }
-    public void setLebar(int newLebar){
-        lebar = newLebar;
-    }
-    public int getJumlahjendela(){
-        return jumlahjendela;
-    }
-    public void setJumlahjendela(int newJumlahjendela){
-        jumlahjendela = newJumlahjendela;
-    }
-    public int getJumlahpintu(){
-        return jumlahpintu;
-    }
-    public void setJumlahpintu(int newJumlahpintu){
-        jumlahpintu = newJumlahpintu;
-    }
-    public int getJumlahkursi(){
-        return jumlahkursi;
-    }
-    public void setJumlahkursi(int newJumlahkursi){
-        jumlahkursi = newJumlahkursi;
-    }
-    public int getJumlahstopkontak() {
+    public void setPanjang(int panjang) {
+		this.panjang = panjang;
+	}
+    public int getLebar() {
+		return lebar;
+	}
+	public void setLebar(int lebar) {
+		this.lebar = lebar;
+	}
+	public int getJumlahkursi() {
+		return jumlahkursi;
+	}
+	public void setJumlahkursi(int jumlahkursi) {
+		this.jumlahkursi = jumlahkursi;
+	}
+	public int getJumlahpintu() {
+		return jumlahpintu;
+	}
+	public void setJumlahpintu(int jumlahpintu) {
+		this.jumlahpintu = jumlahpintu;
+	}
+	public int getJumlahjendela() {
+		return jumlahjendela;
+	}
+	public void setJumlahjendela(int jumlahjendela) {
+		this.jumlahjendela = jumlahjendela;
+	}
+	public int getJumlahstopkontak() {
         return jumlahstopkontak;
     }
     public void setJumlahstopkontak(int jumlahstopkontak) {
@@ -375,4 +370,6 @@ public class RuangKelas {
     public void setBahaya(int bahaya) {
         this.bahaya = bahaya;
     }
+    
+    
 }

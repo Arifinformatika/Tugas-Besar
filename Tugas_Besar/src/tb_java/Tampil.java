@@ -7,7 +7,7 @@ public void ListInputan(){
 		System.out.println(""+super.getNamaruang());
 		System.out.println(""+super.getLokasiruang());
 		System.out.println(""+super.getStudi());
-		System.out.println(""+super.getPanjang());
+		/*System.out.println(""+super.getPanjang());
 		System.out.println(""+super.getLebar());
 		KondisiRKelas a = new KondisiRKelas();
 		System.out.println(" Hasil = "+a.Hitungluas());
@@ -76,7 +76,7 @@ public void ListInputan(){
 		System.out.println(""+super.getKuncijendela());
 		System.out.println(""+f.AnalisisKunciJendela());
 		System.out.println(""+super.getBahaya());
-		System.out.println(""+f.AnalisisKeamananRuang());
+		System.out.println(""+f.AnalisisKeamananRuang());*/
 	}
 }
 	
