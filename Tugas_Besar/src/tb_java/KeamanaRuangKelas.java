@@ -1,13 +1,11 @@
-package tb_java;
 
 import java.util.Scanner;
-
 
 public class KeamanaRuangKelas extends RuangKelas {
 	Scanner in = new Scanner(System.in);
 	
 	@Override
-	public void Keamanan(){
+    public void KeamananRuangKelas(){
 		System.out.println("Kekokohan ruangan : \n1. kokoh \n2. tidak kokoh");
 		super.setKekokohan(in.nextInt());
 		System.out.println("\n");
@@ -21,6 +19,7 @@ public class KeamanaRuangKelas extends RuangKelas {
 		super.setBahaya(in.nextInt());
 		System.out.println("\n");
 	}
+
 	public String AnalisisKekokohan(){
 		if(super.getKekokohan()==1)
 			return("Tingkat Kekokohan = Sesuai");
