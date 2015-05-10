@@ -11,9 +11,7 @@ public class Inventaris extends RuangKelas{
 		super.setInventaris(in.next(), in.next(), in.next(), in.next());
 		
 	}
-	public Inventaris(){
-		
-	}
+
 }
 		
 	
