@@ -51,11 +51,15 @@ public abstract class RuangKelas {
     private int bahaya;
     
     
-    void setInventaris(String namaruang, String lokasiruang, String studi, String fakultas){
+    void setIdentitas(String namaruang, String lokasiruang, String studi, String fakultas){
     	this.namaruang = namaruang;
     	this.lokasiruang = lokasiruang;
     	this.studi = studi;
     	this.fakultas = fakultas;
+    }
+    void setIdentitas(String namaruang, String lokasiruang){
+    	this.namaruang = namaruang;
+    	this.lokasiruang = lokasiruang;
     }
     public String getNamaruang() {
         return namaruang;
