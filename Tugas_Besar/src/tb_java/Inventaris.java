@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Inventaris extends RuangKelas{
 	Scanner in = new Scanner(System.in);
-	//RuangKelas ruang = new RuangKelas();
 	
 	public void Insertdata(){
 		System.out.println("Masukkan Identitas : (nama ruangan, lokasi ruangan, fakultas, Prodi)");
@@ -13,5 +12,3 @@ public class Inventaris extends RuangKelas{
 	}
 
 }
-		
-	
