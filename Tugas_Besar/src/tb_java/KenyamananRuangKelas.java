@@ -1,13 +1,10 @@
-package tb_java;
-
 import java.util.Scanner;
 
 public class KenyamananRuangKelas extends RuangKelas {
 	Scanner in = new Scanner(System.in);
 	
 	@Override
-	public void Kenyamanan(){
-
+    public void KenyamananRuangKelas(){
 		System.out.println("Kondisi Kebisingan : \n1. tidak bising \n2. bising");
 		super.setKebisingan(in.nextInt());
 		System.out.println("\n");
@@ -24,6 +21,7 @@ public class KenyamananRuangKelas extends RuangKelas {
 		super.setKeausan(in.nextInt());
 		System.out.println("\n");
 	}
+
 	public String AnalisisKebisingan(){
 		if(super.getKebisingan()==1)
 			return("Tingkat Kebisingan = Sesuai");
