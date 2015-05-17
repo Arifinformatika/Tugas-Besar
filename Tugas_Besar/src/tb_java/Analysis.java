@@ -227,5 +227,24 @@ public class Analysis extends Inventaris implements Kesesuaian{
 			return("Tingkat Keamanan Ruangan = tidak sesuai");
 		}
 	}
+	@Override
+	public double persentaseKesesuaian(){
+		return sesuai*2.7;
+	}
+	@Override
+	public void KelayakanRuang(){
+		if(persentaseKesesuaian()>=persentaseSesuai){
+			System.out.println( "Kelayakan ruangan sangat baik dan pantas untuk dipakai untuk perkuliahan");
+		}else if(persentaseKesesuaian()>=persentasecukup&&persentaseKesesuaian()<persentaseSesuai){
+			System.out.println("Kelayakan ruangan cukup baik dan masih bisa digunakan");
+		}else if(persentaseKesesuaian()>=persenpenggantian&&persentaseKesesuaian()<persentasecukup){
+			System.out.println("Ada beberapa inventaris ruangan yang harus di ganti atau perbaiki");
+		}else if(persentaseKesesuaian()>=persenRenovasi&&persentaseKesesuaian()<persenpenggantian){
+			System.out.println("Ruangan ini butuh renovasi terlebih dahulu sebelum digunakan");
+		}else if(persentaseKesesuaian()>=persenperbaikanTotal&&persentaseKesesuaian()<persenRenovasi){
+			System.out.println("Ruangan ini butuh Perbikan total sekaligus renovasi dan penggantian barang inventaris");
+		}
+		//return "Kelayakan ruangan sangat baik dan pantas untuk dipakai untuk perkuliahan";
+	}
 	
 }
