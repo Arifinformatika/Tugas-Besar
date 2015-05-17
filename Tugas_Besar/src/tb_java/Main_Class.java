@@ -7,7 +7,7 @@ public class Main_Class {
 		JmlhKondisiPosisiSarana [] b = new JmlhKondisiPosisiSarana[1];
 		KeamanaRuangKelas [] c = new KeamanaRuangKelas[1];
 		KebersihanRuangKelas[] d = new KebersihanRuangKelas[1];
-		KenyamananRuangKelas [] e = new KenyamananRuangKelas[1];
+		Kesesuaian [] e = new Kesesuaian[1];
 		KondisiRKelas [] f = new KondisiRKelas[1];
 		LingkunganRuangKelas [] g = new LingkunganRuangKelas[1];
 		Tampil apa = new Tampil();
@@ -16,9 +16,9 @@ public class Main_Class {
 			a[i] = new Inventaris();
 			a[i].Insertdata();
 		}
-		/*for (int i = 0; i < f.length; i++){
+		for (int i = 0; i < f.length; i++){
 			f[i] = new KondisiRKelas();
-			f[i].kondisi();
+			f[i].KondisiRKelas();
 			f[i].Hitungluas();
 			f[i].BentukRuang();
 			f[i].rasio();
@@ -27,7 +27,7 @@ public class Main_Class {
 		}
 		for (int i = 0; i < b.length; i++) {
 			b[i] = new JmlhKondisiPosisiSarana();
-			b[i].JmlhkondisidanposisiSarana();
+			b[i].JmlhKondisiPosisiSarana();
 			b[i].AnalisaKelistrikan();
 			b[i].AnalisisLCD();
 			b[i].AnalisisLampu();
@@ -38,12 +38,12 @@ public class Main_Class {
 		}
 		for (int i = 0; i < g.length; i++){
 			g[i] = new LingkunganRuangKelas();
-			g[i].lingkungan();
+			g[i].LingkunganRuangKelas();
 			g[i].AnalisisKebersihan();
 		}
 		for (int i = 0; i < d.length; i++){
 			d[i] = new KebersihanRuangKelas();
-			d[i]. Kebersihan();
+			d[i]. KebersihanRuangKelas();
 			d[i]. AnalisisSirkulasiUdara();
 			d[i]. AnalisisKelembapan();
 			d[i]. AnalisisPencahayaan();
@@ -51,8 +51,8 @@ public class Main_Class {
 			d[i].AnalisisSuhu();
 		}
 		for (int i = 0; i < e.length; i++){
-			e[i] = new KenyamananRuangKelas();
-			e[i].Kenyamanan();
+			e[i] = new Kesesuaian();
+			e[i].KenyamananRuangKelas();
 			e[i].AnalisisKebisingan();
 			e[i].AnalisisBau();
 			e[i].AnalisisKebocoran();
@@ -61,12 +61,12 @@ public class Main_Class {
 		}
 		for (int i = 0; i < c.length; i++) {
 			c[i] = new KeamanaRuangKelas();
-			c[i].Keamanan();
+			c[i].KeamananRuangKelas();
 			c[i].AnalisisKekokohan();
 			c[i].AnalisisKunciJendela();
 			c[i].AnalisisKunciPintu();
 			c[i].AnalisisKeamananRuang();
-		}*/
+		}
 		apa.ListInputan();
 		}
 	}

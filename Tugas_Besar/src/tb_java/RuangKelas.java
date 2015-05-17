@@ -50,13 +50,38 @@ public abstract class RuangKelas {
     private int kuncijendela;
     private int bahaya;
     
-    
-    void setInventaris(String namaruang, String lokasiruang, String studi, String fakultas){
+    public RuangKelas(String namaruang, String lokasiruang, String fakultas, String studi){
+    	setNamaruang(namaruang);
+    	setLokasiruang(lokasiruang);
+    	setFakultas(fakultas);
+    	setStudi(studi);
+    }
+   
+	public RuangKelas(){
+    	
+    }
+    void setIdentitas(String namaruang, String lokasiruang, String fakultas, String studi){
     	this.namaruang = namaruang;
     	this.lokasiruang = lokasiruang;
     	this.studi = studi;
     	this.fakultas = fakultas;
     }
+    void setIdentitas(String namaruang, String lokasiruang){
+    	this.namaruang = namaruang;
+    	this.lokasiruang = lokasiruang;
+    }
+    public void setNamaruang(String namaruang) {
+		this.namaruang = namaruang;
+	}
+	public void setLokasiruang(String lokasiruang) {
+		this.lokasiruang = lokasiruang;
+	}
+	public void setStudi(String studi) {
+		this.studi = studi;
+	}
+	public void setFakultas(String fakultas) {
+		this.fakultas = fakultas;
+	}
     public String getNamaruang() {
         return namaruang;
     }
@@ -370,6 +395,16 @@ public abstract class RuangKelas {
     public void setBahaya(int bahaya) {
         this.bahaya = bahaya;
     }
+    public abstract void KondisiKelas();
     
+    public abstract void JmlhKondisiPosisiSarana();
     
+    public abstract void LingkunganRuangKelas();
+    
+    public abstract void KebersihanRuangKelas();
+        
+    public abstract void KenyamananRuangKelas();
+        
+    public abstract void KeamananRuangKelas();
+
 }
