@@ -190,7 +190,7 @@ public class Inventaris extends RuangKelas {
 	public void simpan(){
 		
 		try{
-			FileOutputStream kls = new FileOutputStream("UjiCobaTB.txt");
+			FileOutputStream kls = new FileOutputStream("Tugasbsr.ser");
 			ObjectOutputStream os = new ObjectOutputStream(kls);
 			//os.writeObject(ruang.getNamaruang());
 			os.writeObject(getNamaruang());
