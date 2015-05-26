@@ -4,7 +4,7 @@ public class Main_Class {
 
 	public static void main(String[] args) {
 		Inventaris[] a = new Inventaris[1];
-		Tampil b = new Tampil();
+		
 
 		for (int i = 0; i < a.length; i++) {
 			a[i] = new Inventaris();
@@ -15,8 +15,9 @@ public class Main_Class {
 			a[i].KebersihanRuangKelas();
 			a[i].KenyamananRuangKelas();
 			a[i].KeamananRuangKelas();
+			a[i].tampil();
 		}
-		b.ListInputan();
+		
 
 	}
 }

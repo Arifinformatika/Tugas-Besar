@@ -458,7 +458,6 @@ public abstract class RuangKelas {
 	public void setBahaya(int bahaya) {
 		this.bahaya = bahaya;
 	}
-
 	public abstract void KondisiKelas();
 
 	public abstract void JmlhKondisiPosisiSarana();

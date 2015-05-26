@@ -1,16 +1,17 @@
 package tb_java;
 
-public class Analysis extends Inventaris implements Kesesuaian{
+public class Analysis implements Kesesuaian{
+	Inventaris kls = new Inventaris();
 	int sesuai=0;
 	
 	
 	//kondisi kelas
 	public double Hitungluas(){
-		return super.getPanjang()*super.getLebar();
+		return kls.getPanjang()*kls.getLebar();
 		
 	}
 	public String BentukRuang(){
-		if(super.getPanjang()==super.getLebar()){
+		if(kls.getPanjang()==kls.getLebar()){
 			return("tidak sesuai = Bentuk Ruangan Persegi");
 		}
 		else
@@ -20,7 +21,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	}
 	
 	public double rasio(){
-		return Hitungluas()/super.getJumlahkursi();
+		return Hitungluas()/kls.getJumlahkursi();
 	}
 	
 	public String rasiokelas(){
@@ -34,7 +35,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	}
 	
 	public String AnalisaPintu(){
-		if(super.getJumlahpintu()>=2){
+		if(kls.getJumlahpintu()>=2){
 			sesuai++;
 			return "Jumlah Pintu = Sesuai";
 		}else{
@@ -42,7 +43,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisaJendela(){
-		if(super.getJumlahjendela()>=1){
+		if(kls.getJumlahjendela()>=1){
 			sesuai++;
 			return "Jumlah Jendela = Sesuai";
 		}else{
@@ -52,7 +53,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 
 	//jumlah kondisi dan posisi sarana
 	public String AnalisaKelistrikan(){
-		if(super.getJumlahstopkontak()>=4 && super.getKondisistopkontak()==1||super.getKondisistopkontak()==2&&super.getPosisistopkontak()==1||super.getPosisistopkontak()==2){
+		if(kls.getJumlahstopkontak()>=4 && kls.getKondisistopkontak()==1||kls.getKondisistopkontak()==2&&kls.getPosisistopkontak()==1||kls.getPosisistopkontak()==2){
 			sesuai++;
 			return ("Jumlah StopKontak = Sesuai");
 		}else{
@@ -60,14 +61,14 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisLCD(){
-		if(super.getKabelLCD()>=1&&super.getKondisikabelLCD()==1||super.getKondisikabelLCD()==2&&super.getPosisikabelLCD()==1){
+		if(kls.getKabelLCD()>=1&&kls.getKondisikabelLCD()==1||kls.getKondisikabelLCD()==2&&kls.getPosisikabelLCD()==1){
 			sesuai++;
 			return "jumlah kabel LCD = sesuai";
 	}else
 			return "jumlah kabel LCD = tidak sesuai";
 	}
 	public String AnalisisLampu(){
-		if(super.getJumlahlampu()>=18&&super.getKondisilampu()==1&&super.getPosisilampu()==1){
+		if(kls.getJumlahlampu()>=18&&kls.getKondisilampu()==1&&kls.getPosisilampu()==1){
 			sesuai++;
 			return ("Jumlah Lampu = Sesuai");
 		}else{
@@ -75,7 +76,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKipas(){
-		if(super.getJumlahkipasangin()>=2&&super.getKondisikipasangin()==1&&super.getPosisikipasangin()==1){
+		if(kls.getJumlahkipasangin()>=2&&kls.getKondisikipasangin()==1&&kls.getPosisikipasangin()==1){
 			sesuai++;
 			return ("Jumlah Kipas Angin = Sesuai");
 		}else{
@@ -83,7 +84,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisAC(){
-		if(super.getJumlahAC()>=1&&super.getKondisiAC()==1&&super.getPosisiAC()==1||super.getPosisiAC()==2){
+		if(kls.getJumlahAC()>=1&&kls.getKondisiAC()==1&&kls.getPosisiAC()==1||kls.getPosisiAC()==2){
 			sesuai++;
 			return("Jumlah AC = Sesuai");
 		}else{
@@ -91,7 +92,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisInternet(){
-		if(super.getSSID()==1&&super.getLogin()==1){
+		if(kls.getSSID()==1&&kls.getLogin()==1){
 			sesuai++;
 			return("SSID = Sesuai");
 		}else{
@@ -99,7 +100,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisCCTV(){
-		if(super.getJumlahCCTV()==2&&super.getKondisiCCTV()==1&&super.getPosisiCCTV()==1||super.getPosisiCCTV()==3){
+		if(kls.getJumlahCCTV()==2&&kls.getKondisiCCTV()==1&&kls.getPosisiCCTV()==1||kls.getPosisiCCTV()==3){
 			sesuai++;
 			return("Jumlah CCTV = Sesuai");
 		}else{
@@ -109,7 +110,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	
 	//lingkungan
 	public String AnalisisKebersihan(){
-		if(super.getKondisilantai()==1&&super.getKondisidinding()==1&&super.getKondisiatap()==1&&super.getKondisipintu()==1&&super.getKondisijendela()==1){
+		if(kls.getKondisilantai()==1&&kls.getKondisidinding()==1&&kls.getKondisiatap()==1&&kls.getKondisipintu()==1&&kls.getKondisijendela()==1){
 			sesuai++;
 			return("Kebersihan Ruangan = sesuai");
 		}else{
@@ -120,7 +121,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	//kebersihan
 
 	public String AnalisisSirkulasiUdara(){
-		if(super.getSirkulasiudara()==1){
+		if(kls.getSirkulasiudara()==1){
 			sesuai++;
 			return("Sirkulasi Udara = sesuai");
 		}else{
@@ -128,7 +129,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisPencahayaan(){
-		if(super.getNilaipencahayaan()>=250&&super.getNilaipencahayaan()<=350){
+		if(kls.getNilaipencahayaan()>=250&&kls.getNilaipencahayaan()<=350){
 			sesuai++;
 			return("Pencahayaan = sesuai");
 		}else{
@@ -136,7 +137,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKelembapan(){
-		if(super.getKelembapan()>=70&&super.getKelembapan()<=80){
+		if(kls.getKelembapan()>=70&&kls.getKelembapan()<=80){
 			sesuai++;
 			return("Kelembapan = sesuai");
 		}else{
@@ -144,7 +145,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisSuhu(){
-		if(super.getSuhu()>=25&&super.getSuhu()<=35){
+		if(kls.getSuhu()>=25&&kls.getSuhu()<=35){
 			sesuai++;
 			return("Suhu = sesuai");
 		}else{
@@ -154,7 +155,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	
 	//kenyamanan
 	public String AnalisisKebisingan(){
-		if(super.getKebisingan()==1){
+		if(kls.getKebisingan()==1){
 			sesuai++;
 			return("Tingkat Kebisingan = Sesuai");
 		}else{
@@ -162,7 +163,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisBau(){
-		if(super.getBau()==1){
+		if(kls.getBau()==1){
 			sesuai++;
 			return("Bau Ruangan = Sesuai");
 		}else{
@@ -170,7 +171,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKebocoran(){
-		if(super.getKebocoran()==1){
+		if(kls.getKebocoran()==1){
 			sesuai++;
 			return("Tingkat Kebocoran = Sesuai");
 		}else{
@@ -178,7 +179,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKerusakan(){
-		if(super.getKerusakan()==1){
+		if(kls.getKerusakan()==1){
 			sesuai++;
 			return("Tingkat Kerusakan = Sesuai");
 		}else{
@@ -186,7 +187,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	}
 	}
 	public String AnalisisKeausan(){
-		if(super.getKeausan()==1){
+		if(kls.getKeausan()==1){
 			sesuai++;
 			return("Tingkat Keausan = Sesuai");
 		}else{
@@ -196,7 +197,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 	
 	//keamnan
 	public String AnalisisKekokohan(){
-		if(super.getKekokohan()==1){
+		if(kls.getKekokohan()==1){
 			sesuai++;
 			return("Tingkat Kekokohan = Sesuai");
 		}else{
@@ -204,7 +205,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKunciPintu(){
-		if(super.getKuncipintu()==1){
+		if(kls.getKuncipintu()==1){
 			sesuai++;
 			return("Kunci pintu = Sesuai");
 		}else{
@@ -212,7 +213,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKunciJendela(){
-		if(super.getKuncijendela()==1){
+		if(kls.getKuncijendela()==1){
 			sesuai++;
 			return("Kunci Jendela = Sesuai");
 		}else{
@@ -220,7 +221,7 @@ public class Analysis extends Inventaris implements Kesesuaian{
 		}
 	}
 	public String AnalisisKeamananRuang(){
-		if(super.getBahaya()==1){
+		if(kls.getBahaya()==1){
 			sesuai++;
 			return("Tingkat Keamanan Ruangan = Sesuai");
 		}else{
